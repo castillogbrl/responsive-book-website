@@ -80,7 +80,10 @@ button {
   outline: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--title-color);
   font-family: var(--second-font);
   font-weight: var(--font-medium);
@@ -133,7 +136,8 @@ img {
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden;
+  /* For animation ScrollReveal */
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -227,7 +231,48 @@ img {
 
 
 /*=============== SEARCH ===============*/
+.search {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: hsla(230, 12%, 96%, .6);
+  backdrop-filter: blur(16px);
+  padding: 8rem 1.25rem;
+  transition: top .4s;
+}
 
+.search__form {
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  background-color: var(--container-color);
+  border: 2px solid var(--border-color);
+  padding-inline: 1rem;
+}
+
+.search__icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.search__input {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: var(--container-color);
+  color: var(--text-color);
+}
+
+.search__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
 
 /* Show search */
 
