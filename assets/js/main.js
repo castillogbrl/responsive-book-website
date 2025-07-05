@@ -1,5 +1,21 @@
 /*=============== SEARCH ===============*/
+const searchContent = document.getElementById('search-content'),
+      searchButton = document.getElementById('search-button'),
+      searchClose = document.getElementById('search-close');
 
+/* Show menu */
+if (searchButton) {
+    searchButton.addEventListener('click', () => {
+        searchContent.classList.add('show-search')
+    })
+}
+
+/* Hide menu*/
+if (searchClose) {
+    searchClose.addEventListener('click', () => {
+        searchContent.classList.remove('show-search')
+    })
+}
 
 /*=============== LOGIN ===============*/
 
