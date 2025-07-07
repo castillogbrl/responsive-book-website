@@ -422,8 +422,25 @@ img {
   box-shadow: 0 4px 32px hsla(230, 72%, 32%, .4)
 }
 
-/*=============== SERVICES ===============*/
+/* SERVICES */
+.services__container {
+  row-gap: 3rem;
+}
 
+.services__card {
+  text-align: center;
+}
+
+.services__card i {
+  font-size: 3rem;
+  color: var(--first-color);
+  margin-bottom: 1rem;
+}
+
+.services__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+}
 
 /*=============== FEATURED ===============*/
 
