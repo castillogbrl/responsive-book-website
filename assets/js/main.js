@@ -36,11 +36,34 @@ if (loginClose) {
     })
 }
 
-/*=============== ADD SHADOW HEADER ===============*/
+/* ADD SHADOW HEADER */
+const shadowHeader = () => {
+    const header = document.getElementById('header');
+    this.scrollY >= 50 ? header.classList.add('shadow-header')
+                       : header.classList.remove('shadow-header');
+};
+window.addEventListener('scroll', shadowHeader);
 
+/* HOME SWIPER */
+let swiperHome = new Swiper('.home__swiper', {
+    loop: true,
+    spaceBetween: -24,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
 
-/*=============== HOME SWIPER ===============*/
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
 
+    breakpoints: {
+        1220: {
+            spaceBetween: -32,
+        }
+    }
+})
 
 /*=============== FEATURED SWIPER ===============*/
 

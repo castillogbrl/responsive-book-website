@@ -10,8 +10,8 @@
       <!--=============== REMIXICONS ===============-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
 
-      <!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="">
+      <!-- SWIPER CSS -->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
@@ -19,7 +19,7 @@
       <title>Responsive book website - Bedimcode</title>
    </head>
    <body>
-      <!--==================== HEADER ====================-->
+      <!-- HEADER -->
       <header class="header" id="header">
          <nav class="nav container">
             <a href="" class="nav__logo">
@@ -121,11 +121,49 @@
          <i class="ri-close-line login__close" id="login-close"></i>
       </div>
 
-      <!--==================== MAIN ====================-->
+      <!-- MAIN -->
       <main class="main">
-         <!--==================== HOME ====================-->
+         <!-- HOME -->
          <section class="home section" id="home">
-            
+            <div class="home__container container grid">
+               <div class="home__data">
+                  <h1 class="home__title">
+                     Browse & <br>
+                     Select E-books
+                  </h1>
+
+                  <p class="home__description">
+                     Find the best e-books from your favorite
+                     writers, explore hundreds of books with all
+                     possible categories, take advantage of the
+                     50% discount and much more.
+                  </p>
+
+                  <a href="#" class="button">Explore Now</a>
+               </div>
+
+               <div class="home__images">
+                  <div class="home__swiper swiper">
+                     <div class="swiper-wrapper">
+                        <article class="home__article swiper-slide">
+                           <img src="assets/img/home-book-1.png" alt="image" class="home__img">
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                           <img src="assets/img/home-book-2.png" alt="image" class="home__img">
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                           <img src="assets/img/home-book-3.png" alt="image" class="home__img">
+                        </article>
+
+                        <article class="home__article swiper-slide">
+                           <img src="assets/img/home-book-4.png" alt="image" class="home__img">
+                        </article>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </section>
 
          <!--==================== SERVICES ====================-->
@@ -170,8 +208,8 @@
       <!--=============== SCROLLREVEAL ===============-->
       <script src=""></script>
 
-      <!--=============== SWIPER JS ===============-->
-      <script src=""></script>
+      <!-- SWIPER JS -->
+      <script src="assets/js/swiper-bundle.min.js"></script>
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
