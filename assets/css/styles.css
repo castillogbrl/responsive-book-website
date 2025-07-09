@@ -607,7 +607,7 @@ img {
   color: var(--first-color);
 }
 
-/*=============== JOIN ===============*/
+/* JOIN */
 .join__container {
   position: relative;
   padding-block: 3rem;
@@ -753,8 +753,22 @@ img {
   font-size: var(--small-font-size);
 }
 
-/*=============== SCROLL BAR ===============*/
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: .6rem;
+  border-radius: .5rem;
+  background-color: hsl(230, 16%, 85%);
+}
 
+::-webkit-scrollbar-thumb {
+  border-radius: .5rem;
+  background-color: hsl(230, 16%, 65%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: .5rem;
+  background-color: hsl(230, 16%, 55%);
+}
 
 /*=============== SCROLL UP ===============*/
 
