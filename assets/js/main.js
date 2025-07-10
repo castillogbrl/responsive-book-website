@@ -148,7 +148,7 @@ const scrollActive = () => {
 
 window.addEventListener('scroll', scrollActive)
 
-/*=============== DARK LIGHT THEME ===============*/ 
+/* DARK LIGHT THEME */ 
 const themeButton = document.getElementById('theme-button'),
       darkTheme = 'dark-theme',
       iconTheme = 'ri-sun-line'
@@ -177,4 +177,18 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+/* SCROLL REVEAL ANIMATION */
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    // reset: true // Animation repeats
+})
+
+sr.reveal(`.home__data, .featured__container, .new__container,
+           .join__data, .testimonial__container, .footer`)
+sr.reveal(`.home__images`, {delay: 600})
+sr.reveal(`.services__card`, {delay: 600})
+sr.reveal(`.discount__data`, {origin: 'left'})
+sr.reveal(`.discount__images`, {origin: 'right'})
