@@ -149,6 +149,32 @@ const scrollActive = () => {
 window.addEventListener('scroll', scrollActive)
 
 /*=============== DARK LIGHT THEME ===============*/ 
+const themeButton = document.getElementById('theme-button'),
+      darkTheme = 'dark-theme',
+      iconTheme = 'ri-sun-line'
 
+// Previously selected (if user has selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// Getting current theme by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
+// Validate if the user previously chose a theme
+if(selectedTheme) {
+    // If validation is fullfilled, check the theme
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+}
+
+themeButton.addEventListener('click', () => {
+    // Add or remove theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
